@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/kitchentodoapp/static/css/main.3d6c70dd.chunk.css",
+    "main.js": "/kitchentodoapp/static/js/main.37f62051.chunk.js",
+    "main.js.map": "/kitchentodoapp/static/js/main.37f62051.chunk.js.map",
+    "runtime-main.js": "/kitchentodoapp/static/js/runtime-main.04b19848.js",
+    "runtime-main.js.map": "/kitchentodoapp/static/js/runtime-main.04b19848.js.map",
+    "static/js/2.b63fa160.chunk.js": "/kitchentodoapp/static/js/2.b63fa160.chunk.js",
+    "static/js/2.b63fa160.chunk.js.map": "/kitchentodoapp/static/js/2.b63fa160.chunk.js.map",
+    "index.html": "/kitchentodoapp/index.html",
+    "static/css/main.3d6c70dd.chunk.css.map": "/kitchentodoapp/static/css/main.3d6c70dd.chunk.css.map",
+    "static/js/2.b63fa160.chunk.js.LICENSE.txt": "/kitchentodoapp/static/js/2.b63fa160.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.04b19848.js",
+    "static/js/2.b63fa160.chunk.js",
+    "static/css/main.3d6c70dd.chunk.css",
+    "static/js/main.37f62051.chunk.js"
+  ]
+}
