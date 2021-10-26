@@ -1,46 +1,72 @@
-import React from "react"
+import React, { useState } from "react";
 import './App.css';
 import ToDoList from "./ToDoList";
-import Todos from "./Todos"
-import Header from "./Header"
-import './logo.png'
+import Form from "./Form"
+import { nanoid } from "nanoid";
+import Header from "./Header";
 
-class App extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      Todos: Todos
-    }
-    this.handleChange = this.handleChange.bind(this)
+
+function App(props) {
+
+  const [tasks, setTasks] = useState(props.tasks);
+
+  function addTask(name) {
+    const newTask = { id: "todo-" + nanoid(), name: name, completed: false };
+    setTasks([...tasks, newTask]);
   }
 
-  handleChange(id) {
-    this.setState(prevState => {
-        const updatedTodos = prevState.Todos.map(todo => {
-            if (todo.id === id) {
-              return {
-                ...todo,
-                completed: !todo.completed
-            }
-            }
-            return todo
-        })
-        return {
-            Todos: updatedTodos
-        }
-    })
-} 
-  render() {
-    const TodoItem = this.state.Todos.map(item => <ToDoList key ={item.id} item={item} handleChange={this.handleChange}/>)
-    return (
-      <div className="todo-list">
-         <Header />
-         {TodoItem}
-        
-      </div>
-    );
+  function editTask(id, newName) {
+    const editedTaskList = tasks.map(task => {
+      if (id === task.id) {
+        return {...task, name: newName}
+      }
+      return task;
+    });
+    setTasks(editedTaskList);
   }
-  }
- 
 
-export default App;
+  function toggleTaskCompleted(id) {
+    const updatedTasks = tasks.map(task => {
+      if (id === task.id) {
+        return {...task, completed: !task.completed}
+      }
+      return task;
+    });
+    setTasks(updatedTasks);
+  
+  }
+
+  function deleteTask(id) {
+    const remainingTasks = tasks.filter(task => id !== task.id);
+  setTasks(remainingTasks);
+  }
+
+  const taskList = tasks.map(task => (
+    <ToDoList
+      id={task.id}
+      name={task.name}
+      completed={task.completed}
+      key={task.id}
+      toggleTaskCompleted={toggleTaskCompleted}
+      deleteTask={deleteTask}
+      editTask={editTask}
+    />
+  )
+);
+  return (
+    <div className="todo-list">
+      
+      <Header/>
+
+      <Form addTask={addTask}/>
+      
+      <ul aria-labelledby="list-heading" >
+        <div>
+        <p>{taskList}</p>
+        </div>
+      </ul>
+    </div>
+  );
+}
+
+ export default App
