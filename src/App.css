@@ -48,7 +48,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         0 20px 0 -10px #eee,
             /* The third layer shadow */
         0 20px 1px -9px rgba(0,0,0,0.15);
-    padding: 20px;
+    padding: 25px;
 }
 
 .todo-item {
