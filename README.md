@@ -1,5 +1,4 @@
-This is a simple read-only web application that helps track coompleted to do items. It contains the basic features of a todo app as it can only mark completed items and uncheck completed items. It was created as my first ever react projec.
-If you need to use any part of the code for your own projects, please feel free to do so.
+This is a simple  web application that helps track to do items. The user is able to tasks, edit,tasks and delete tasks as needed within the user interface. Another feature if the application is for users to 'mark off' completed tasks if they do not want to delete immediately.
 
 
 
