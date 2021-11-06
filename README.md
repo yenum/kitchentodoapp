@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 Kitchen To-Do App
 Version 1.2.1
+=======
+This is a simple  web application that helps track to do items. The user is able to tasks, edit,tasks and delete tasks as needed within the user interface. Another feature if the application is for users to 'mark off' completed tasks if they do not want to delete immediately.
+>>>>>>> 50fecb3277e16c802387661a28e8ea5878e6f655
 
 About the project:
 
