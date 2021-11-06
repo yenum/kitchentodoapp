@@ -5,9 +5,7 @@ import Form from "./Form"
 import { nanoid } from "nanoid";
 import Header from "./Header";
 
-
-function App(props) {
-
+const App = (props) => {
   const [tasks, setTasks] = useState(props.tasks);
 
   function addTask(name) {
@@ -68,5 +66,23 @@ function App(props) {
     </div>
   );
 }
+
+
+export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
  export default App

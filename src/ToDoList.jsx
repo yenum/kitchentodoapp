@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
-
-function ToDoList(props) {
-    const [isEditing, setEditing] = useState(false);
+const ToDoList = (props) => {
+  const [isEditing, setEditing] = useState(false);
     const [newName, setNewName] = useState('');
     const completedStyle = {
         fontStyle: "italic",
@@ -84,4 +83,15 @@ function ToDoList(props) {
     
 }
 
-export default ToDoList;
+export default ToDoList
+
+
+
+
+
+
+
+
+
+
+

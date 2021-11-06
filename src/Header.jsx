@@ -1,8 +1,7 @@
 import React from "react"
 import logo from "./logo.png"
 
-
-function Header() {
+const Header = () => {
     return(
         <div className="top">
             <img src={logo} width="80px" alt="logo"/>
@@ -11,4 +10,12 @@ function Header() {
     )
 }
 
-export default Header;
+export default Header
+
+
+
+
+
+
+
+
